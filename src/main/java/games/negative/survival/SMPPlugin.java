@@ -1,11 +1,12 @@
-package games.negative.plugin;
+package games.negative.survival;
 
 import games.negative.alumina.AluminaPlugin;
+import games.negative.survival.listener.AntiTrampleListener;
 import org.jetbrains.annotations.NotNull;
 
-public class Plugin extends AluminaPlugin {
+public class SMPPlugin extends AluminaPlugin {
 
-    private static Plugin instance;
+    private static SMPPlugin instance;
 
     @Override
     public void load() {
@@ -14,7 +15,9 @@ public class Plugin extends AluminaPlugin {
 
     @Override
     public void enable() {
-
+        registerListeners(
+                new AntiTrampleListener()
+        );
     }
 
     @Override
@@ -27,7 +30,7 @@ public class Plugin extends AluminaPlugin {
      * @return The instance of the plugin.
      */
     @NotNull
-    public static Plugin instance() {
+    public static SMPPlugin instance() {
         return instance;
     }
 }

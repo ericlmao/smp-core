@@ -1,7 +1,7 @@
-package games.negative.plugin.core;
+package games.negative.survival.core;
 
 import games.negative.alumina.message.Message;
-import games.negative.plugin.Plugin;
+import games.negative.survival.SMPPlugin;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -22,7 +22,7 @@ public enum Locale {
         this.defMessage = defMessage;
     }
 
-    public static void init(@NotNull Plugin plugin) {
+    public static void init(@NotNull SMPPlugin plugin) {
         File file = new File(plugin.getDataFolder(), "messages.yml");
         validateFile(plugin, file);
 
@@ -44,7 +44,7 @@ public enum Locale {
         }
     }
 
-    private static void saveFile(@NotNull Plugin plugin, @NotNull File file, @NotNull FileConfiguration config) {
+    private static void saveFile(@NotNull SMPPlugin plugin, @NotNull File file, @NotNull FileConfiguration config) {
         try {
             config.save(file);
         } catch (IOException e) {
@@ -52,7 +52,7 @@ public enum Locale {
         }
     }
 
-    private static void validateFile(@NotNull Plugin plugin, @NotNull File file) {
+    private static void validateFile(@NotNull SMPPlugin plugin, @NotNull File file) {
         if (!file.exists()) {
             boolean dirSuccess = file.getParentFile().mkdirs();
             if (dirSuccess) plugin.getLogger().info("Created new plugin directory file!");
