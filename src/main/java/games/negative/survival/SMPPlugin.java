@@ -1,7 +1,7 @@
 package games.negative.survival;
 
 import games.negative.alumina.AluminaPlugin;
-import games.negative.survival.listener.AntiTrampleListener;
+import games.negative.survival.listener.CropListener;
 import org.jetbrains.annotations.NotNull;
 
 public class SMPPlugin extends AluminaPlugin {
@@ -16,7 +16,7 @@ public class SMPPlugin extends AluminaPlugin {
     @Override
     public void enable() {
         registerListeners(
-                new AntiTrampleListener()
+                new CropListener()
         );
     }
 
