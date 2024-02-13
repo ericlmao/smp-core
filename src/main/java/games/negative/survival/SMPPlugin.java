@@ -2,6 +2,11 @@ package games.negative.survival;
 
 import games.negative.alumina.AluminaPlugin;
 import games.negative.survival.listener.CropListener;
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
+import org.bukkit.inventory.FurnaceRecipe;
+import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
 public class SMPPlugin extends AluminaPlugin {
@@ -18,6 +23,16 @@ public class SMPPlugin extends AluminaPlugin {
         registerListeners(
                 new CropListener()
         );
+
+        FurnaceRecipe rottenFleshToLeather = new FurnaceRecipe(
+                new NamespacedKey(this, "rotten_flesh_to_leather"),
+                new ItemStack(Material.LEATHER),
+                Material.ROTTEN_FLESH,
+                1,
+                200
+        );
+
+        Bukkit.getServer().addRecipe(rottenFleshToLeather);
     }
 
     @Override
