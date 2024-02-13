@@ -1,0 +1,5 @@
+name: Plugin
+main: games.negative.plugin.Plugin
+version: '${project.version}'
+authors: [ "ericlmao" ]
+api-version: 1.20
