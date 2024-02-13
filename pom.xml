@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>games.negative.plugin</groupId>
-    <artifactId>plugin</artifactId>
+    <groupId>games.negative.survival</groupId>
+    <artifactId>smp-core</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -17,7 +17,7 @@
 
     <!-- Build Script -->
     <build>
-        <finalName>plugin</finalName>
+        <finalName>SMP-Core</finalName>
 
         <plugins>
             <!-- Maven Compiler -->
