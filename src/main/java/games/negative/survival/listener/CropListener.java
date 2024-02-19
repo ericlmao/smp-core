@@ -53,10 +53,7 @@ public class CropListener implements Listener {
         BlockData data = block.getBlockData();
 
         // Check if the block is a crop
-        if (!(data instanceof Ageable crop)) {
-            Bukkit.broadcastMessage("Not a crop");
-            return;
-        }
+        if (!(data instanceof Ageable crop)) return;
 
         event.setCancelled(true);
 
